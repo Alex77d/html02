@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 - 邻里社区</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* 头像样式改进 */
+        .avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="device-frame">
+        <!-- 状态栏 -->
+        <div class="status-bar">
+            <span class="time">11:30</span>
+            <div class="indicators">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-three-quarters"></i>
+            </div>
+        </div>
+        
+        <!-- 应用内容区域 -->
+        <div class="app-content">
+            <!-- 顶部导航栏 -->
+            <div class="top-nav">
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>望京花园</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="搜索社区活动、租借、服务...">
+                </div>
+                <i class="far fa-bell"></i>
+            </div>
+            
+            <!-- 轮播区域 -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1527525443983-6e60c75fff46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tbXVuaXR5JTIwZ2FyZGVufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60');">
+                        <div class="slide-content">
+                            <div class="slide-title">社区春季花园活动</div>
+                            <div class="slide-subtitle">本周六上午10点，欢迎参加！</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1556009340-2c3cdbf4cb8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmljeWNsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60');">
+                        <div class="slide-content">
+                            <div class="slide-title">共享单车免费骑行</div>
+                            <div class="slide-subtitle">新用户专享，立即体验</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW92aWUlMjBuaWdodHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60');">
+                        <div class="slide-content">
+                            <div class="slide-title">社区电影之夜</div>
+                            <div class="slide-subtitle">本周五晚8点，中庭广场见</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 租借服务区域 -->
+            <div class="card-section">
+                <div class="section-header">
+                    <h2 class="section-title">附近的租借</h2>
+                    <a href="#" class="section-more">查看全部</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXNpYW4lMjBtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="张先生" class="avatar">
+                        <div class="user-info">
+                            <div class="user-name">张先生</div>
+                            <div class="post-time">2小时前 · 距离500米</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-text">闲置的电动自行车，周末可租借，押金500元，每天50元，有需要的邻居可以联系我。</p>
+                        <img src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZWxlY3RyaWMlMjBiaWtlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" alt="电动自行车" class="card-image">
+                        <div class="card-footer">
+                            <button class="action-button">
+                                <i class="far fa-comment"></i>
+                                <span class="counter">3</span>
+                            </button>
+                            <button class="action-button">
+                                <i class="far fa-heart"></i>
+                                <span class="counter">12</span>
+                            </button>
+                            <button class="action-button">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                            <button class="action-button">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1628015081036-0747ec8f077a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXNpYW4lMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="李女士" class="avatar">
+                        <div class="user-info">
+                            <div class="user-name">李女士</div>
+                            <div class="post-time">4小时前 · 距离300米</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-text">闲置烘焙工具一套，可出租可借用，有喜欢烘焙的邻居可以联系我哦，可以教你做蛋糕~</p>
+                        <img src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFraW5nJTIwdG9vbHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="烘焙工具" class="card-image">
+                        <div class="card-footer">
+                            <button class="action-button">
+                                <i class="far fa-comment"></i>
+                                <span class="counter">8</span>
+                            </button>
+                            <button class="action-button">
+                                <i class="far fa-heart"></i>
+                                <span class="counter">24</span>
+                            </button>
+                            <button class="action-button">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                            <button class="action-button">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 兴趣小组区域 -->
+            <div class="card-section">
+                <div class="section-header">
+                    <h2 class="section-title">热门兴趣小组</h2>
+                    <a href="#" class="section-more">查看全部</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cnVubmluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="晨跑俱乐部" class="avatar">
+                        <div class="user-info">
+                            <div class="user-name">晨跑俱乐部</div>
+                            <div class="post-time">活跃成员 128 · 今日活动 1</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-text">每天早上6:30中央公园集合，一起晨跑迎接美好的一天！今日路线：樱花大道→湖心岛→音乐广场</p>
+                        <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cnVubmluZyUyMGdyb3VwfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" alt="晨跑活动" class="card-image">
+                        <div class="card-footer">
+                            <button class="action-button">
+                                <i class="far fa-comment"></i>
+                                <span class="counter">15</span>
+                            </button>
+                            <button class="action-button">
+                                <i class="far fa-heart"></i>
+                                <span class="counter">42</span>
+                            </button>
+                            <button class="action-button">
+                                <i class="fas fa-user-plus"></i>
+                                <span>加入</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1530538987395-032d1800fdd4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9vayUyMGNsdWJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="读书会" class="avatar">
+                        <div class="user-info">
+                            <div class="user-name">读书会</div>
+                            <div class="post-time">活跃成员 76 · 每周活动</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-text">本周推荐书目：《人类简史》，周日下午3点社区图书馆三楼会议室讨论，欢迎新成员加入！</p>
+                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Ym9vayUyMGNsdWJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="读书会活动" class="card-image">
+                        <div class="card-footer">
+                            <button class="action-button">
+                                <i class="far fa-comment"></i>
+                                <span class="counter">23</span>
+                            </button>
+                            <button class="action-button">
+                                <i class="far fa-heart"></i>
+                                <span class="counter">37</span>
+                            </button>
+                            <button class="action-button">
+                                <i class="fas fa-user-plus"></i>
+                                <span>加入</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部导航栏 -->
+        <div class="tab-bar">
+            <div class="tab-item active" data-target="home">
+                <i class="fas fa-home"></i>
+                <span class="tab-item-label">首页</span>
+            </div>
+            <div class="tab-item" data-target="discover">
+                <i class="fas fa-compass"></i>
+                <span class="tab-item-label">发现</span>
+            </div>
+            <div class="tab-item" data-target="post">
+                <i class="fas fa-plus-circle"></i>
+                <span class="tab-item-label">发布</span>
+            </div>
+            <div class="tab-item" data-target="messages">
+                <i class="far fa-comment-dots"></i>
+                <span class="tab-item-label">消息</span>
+            </div>
+            <div class="tab-item" data-target="profile">
+                <i class="far fa-user"></i>
+                <span class="tab-item-label">我的</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html> 

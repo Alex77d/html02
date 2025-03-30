@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消息 - 邻里社区</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="device-frame">
+        <!-- 状态栏 -->
+        <div class="status-bar">
+            <span class="time">11:30</span>
+            <div class="indicators">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-three-quarters"></i>
+            </div>
+        </div>
+        
+        <!-- 应用内容区域 -->
+        <div class="app-content">
+            <!-- 顶部导航栏 -->
+            <div class="top-nav">
+                <h2 style="font-size: 18px; font-weight: 600; margin: 0; flex: 1; text-align: center;">消息</h2>
+                <i class="fas fa-plus" style="font-size: 18px;"></i>
+            </div>
+            
+            <!-- 消息类型选项卡 -->
+            <div class="category-tabs">
+                <div class="category-tab active">全部</div>
+                <div class="category-tab">聊天</div>
+                <div class="category-tab">通知</div>
+                <div class="category-tab">系统</div>
+            </div>
+            
+            <!-- 消息列表 -->
+            <div class="message-list">
+                <div class="message-item">
+                    <img src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXNpYW4lMjBtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="用户头像" class="avatar">
+                    <div class="message-content">
+                        <div class="message-name">张先生</div>
+                        <div class="message-preview">您好，我看到您对电动自行车有兴趣，是否需要详细了解一下？</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="message-time">10:30</div>
+                        <div class="badge">2</div>
+                    </div>
+                </div>
+                
+                <div class="message-item">
+                    <img src="https://images.unsplash.com/photo-1628015081036-0747ec8f077a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXNpYW4lMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="用户头像" class="avatar">
+                    <div class="message-content">
+                        <div class="message-name">李女士</div>
+                        <div class="message-preview">蛋糕烘焙工具已经给您准备好了，可以随时来取哦！</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="message-time">昨天</div>
+                    </div>
+                </div>
+                
+                <div class="message-item">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-color); display: flex; align-items: center; justify-content: center; color: white;">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-name">系统通知</div>
+                        <div class="message-preview">您的租借订单已完成，请记得评价哦！</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="message-time">昨天</div>
+                    </div>
+                </div>
+                
+                <div class="message-item">
+                    <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cnVubmluZyUyMGdyb3VwfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="群组头像" class="avatar">
+                    <div class="message-content">
+                        <div class="message-name">晨跑俱乐部</div>
+                        <div class="message-preview">王教练：明天早上6:30，大家准时在公园门口集合！</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="message-time">昨天</div>
+                        <div class="badge">5</div>
+                    </div>
+                </div>
+                
+                <div class="message-item">
+                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGFzaWFuJTIwbWFufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="用户头像" class="avatar">
+                    <div class="message-content">
+                        <div class="message-name">王先生</div>
+                        <div class="message-preview">请问您的投影仪什么时候可以借出呢？我想周末用一下。</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="message-time">周二</div>
+                    </div>
+                </div>
+                
+                <div class="message-item">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--accent-color); display: flex; align-items: center; justify-content: center; color: white;">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-name">点赞通知</div>
+                        <div class="message-preview">李女士和其他5人赞了你的帖子</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="message-time">周一</div>
+                    </div>
+                </div>
+                
+                <div class="message-item">
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Ym9vayUyMGNsdWJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="群组头像" class="avatar">
+                    <div class="message-content">
+                        <div class="message-name">读书会</div>
+                        <div class="message-preview">赵老师：大家记得提前阅读《人类简史》第一章哦，周日讨论会上见！</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="message-time">上周</div>
+                    </div>
+                </div>
+                
+                <div class="message-item">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--secondary-color); display: flex; align-items: center; justify-content: center; color: white;">
+                        <i class="fas fa-comment"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-name">评论通知</div>
+                        <div class="message-preview">张先生评论了你的帖子：这个主意很棒，我想参加！</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="message-time">上周</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部导航栏 -->
+        <div class="tab-bar">
+            <div class="tab-item" data-target="home">
+                <i class="fas fa-home"></i>
+                <span class="tab-item-label">首页</span>
+            </div>
+            <div class="tab-item" data-target="discover">
+                <i class="fas fa-compass"></i>
+                <span class="tab-item-label">发现</span>
+            </div>
+            <div class="tab-item" data-target="post">
+                <i class="fas fa-plus-circle"></i>
+                <span class="tab-item-label">发布</span>
+            </div>
+            <div class="tab-item active" data-target="messages">
+                <i class="far fa-comment-dots"></i>
+                <span class="tab-item-label">消息</span>
+            </div>
+            <div class="tab-item" data-target="profile">
+                <i class="far fa-user"></i>
+                <span class="tab-item-label">我的</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html> 

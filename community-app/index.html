@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邻里社区 - 原型展示</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="./js/encoding-fix.js"></script>
+    <style>
+        body {
+            font-family: 'SF Pro Display', 'SF Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 16px;
+            color: #333;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .header h1:after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #4CAF50;
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .header p {
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: 24px auto 0;
+            line-height: 1.6;
+        }
+        
+        .prototype-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+            gap: 30px;
+            justify-content: center;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .prototype-item {
+            text-align: center;
+            background-color: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .prototype-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+        
+        .prototype-label {
+            margin-top: 16px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #4CAF50;
+            padding: 8px 0;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .device-iframe {
+            width: 390px;
+            height: 844px;
+            border-radius: 44px;
+            border: 12px solid #111;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+        
+        .theme-info {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 0 auto 40px;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        }
+        
+        .theme-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .theme-info p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        /* 隐藏iframe内部页面的device-frame */
+        iframe html body .device-frame {
+            border: none !important;
+            box-shadow: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>邻里社区 App 原型</h1>
+        <p>这是一个社区交互界面的图文社交App，满足人们租借东西，参加兴趣小组，社交的需求。我们的设计理念是简洁、友好和易用，以促进邻居间的互助和交流。</p>
+    </div>
+    
+    <div class="theme-info">
+        <h2>绿色主题</h2>
+        <p>我们选择绿色作为主题色，代表生长、和谐与合作，传达出自然、环保与友好的理念，非常适合社区互助平台。</p>
+    </div>
+    
+    <div class="prototype-container">
+        <div class="prototype-item">
+            <iframe src="./home-content.html" frameborder="0" class="device-iframe"></iframe>
+            <div class="prototype-label">首页</div>
+        </div>
+        
+        <div class="prototype-item">
+            <iframe src="./discover-content.html" frameborder="0" class="device-iframe"></iframe>
+            <div class="prototype-label">发现</div>
+        </div>
+        
+        <div class="prototype-item">
+            <iframe src="./post-content.html" frameborder="0" class="device-iframe"></iframe>
+            <div class="prototype-label">发布</div>
+        </div>
+        
+        <div class="prototype-item">
+            <iframe src="./messages-content.html" frameborder="0" class="device-iframe"></iframe>
+            <div class="prototype-label">消息</div>
+        </div>
+        
+        <div class="prototype-item">
+            <iframe src="./profile-content.html" frameborder="0" class="device-iframe"></iframe>
+            <div class="prototype-label">我的</div>
+        </div>
+        
+        <div class="prototype-item">
+            <iframe src="./chat-content.html" frameborder="0" class="device-iframe"></iframe>
+            <div class="prototype-label">聊天</div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>邻里社区 App &copy; 2023 - 所有页面中的设备尺寸基于 iPhone 15 Pro</p>
+    </footer>
+    
+    <script>
+        // 跨iframe通信
+        window.addEventListener('message', function(event) {
+            if (event.data.action === 'navigateTo') {
+                const targetPage = event.data.page;
+                const iframes = document.querySelectorAll('iframe');
+                
+                iframes.forEach(iframe => {
+                    if (iframe.src.includes(targetPage + '-content.html')) {
+                        // 滚动到目标iframe
+                        iframe.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center'
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

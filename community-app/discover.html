@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发现 - 邻里社区</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* 分类选项卡改进 */
+        .category-tabs {
+            display: flex;
+            overflow-x: auto;
+            padding: 12px 16px;
+            gap: 12px;
+            background-color: white;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .category-tab {
+            padding: 8px 16px;
+            background-color: var(--light-gray);
+            border-radius: 16px;
+            font-size: 14px;
+            white-space: nowrap;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .category-tab.active {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="device-frame">
+        <!-- 状态栏 -->
+        <div class="status-bar">
+            <span class="time">11:30</span>
+            <div class="indicators">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-three-quarters"></i>
+            </div>
+        </div>
+        
+        <!-- 应用内容区域 -->
+        <div class="app-content">
+            <!-- 顶部导航栏 -->
+            <div class="top-nav">
+                <div class="search-bar" style="margin-left: 0;">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="搜索内容、人或小组...">
+                </div>
+                <i class="fas fa-filter"></i>
+            </div>
+            
+            <!-- 分类选项卡 -->
+            <div class="category-tabs">
+                <div class="category-tab active">全部</div>
+                <div class="category-tab">租借</div>
+                <div class="category-tab">兴趣小组</div>
+                <div class="category-tab">闲置交易</div>
+                <div class="category-tab">社区活动</div>
+                <div class="category-tab">求助</div>
+                <div class="category-tab">邻里服务</div>
+            </div>
+            
+            <!-- 网格布局区域 -->
+            <div class="grid-layout">
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1532499012001-f5f91727de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8a2lkcyUyMGJpa2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="儿童自行车" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                    <div class="grid-item-content">
+                        <div class="grid-item-title">儿童自行车出租</div>
+                        <div class="grid-item-subtitle">¥30/天 · 距离120米</div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyYmVjdWV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="烧烤架" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                    <div class="grid-item-content">
+                        <div class="grid-item-title">露营烧烤架</div>
+                        <div class="grid-item-subtitle">¥50/天 · 距离250米</div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvdG9ncmFwaHklMjBncm91cHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="摄影小组" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                    <div class="grid-item-content">
+                        <div class="grid-item-title">摄影爱好者</div>
+                        <div class="grid-item-subtitle">92名成员 · 活跃中</div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGV0JTIwc2l0dGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="宠物寄养" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                    <div class="grid-item-content">
+                        <div class="grid-item-title">宠物寄养服务</div>
+                        <div class="grid-item-subtitle">¥80/天 · 距离450米</div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8eW9nYSUyMGNsYXNzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="瑜伽课程" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                    <div class="grid-item-content">
+                        <div class="grid-item-title">社区瑜伽课</div>
+                        <div class="grid-item-subtitle">周二/四 19:00</div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29mYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="沙发转让" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                    <div class="grid-item-content">
+                        <div class="grid-item-title">沙发转让</div>
+                        <div class="grid-item-subtitle">¥600 · 九成新</div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1662997137207-355f9133dd95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHN3aXRjaCUyMGdhbWV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="游戏设备" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                    <div class="grid-item-content">
+                        <div class="grid-item-title">Switch游戏机</div>
+                        <div class="grid-item-subtitle">¥40/天 · 距离350米</div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFza2V0YmFsbCUyMGdyb3VwfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="篮球小组" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                    <div class="grid-item-content">
+                        <div class="grid-item-title">社区篮球队</div>
+                        <div class="grid-item-subtitle">65名成员 · 周末活动</div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1626379953822-baec19c3accd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvamVjdG9yfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="投影仪" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                    <div class="grid-item-content">
+                        <div class="grid-item-title">便携投影仪</div>
+                        <div class="grid-item-subtitle">¥60/天 · 距离200米</div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1560541919-eb5c2da6a5a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGFyZW50JTIwYW5kJTIwY2hpbGR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="亲子活动" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                    <div class="grid-item-content">
+                        <div class="grid-item-title">亲子阅读会</div>
+                        <div class="grid-item-subtitle">周日 10:00 · 免费</div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1482350325005-eda5e677279b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29mZmVlJTIwY2x1YnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="咖啡小组" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                    <div class="grid-item-content">
+                        <div class="grid-item-title">咖啡品鉴小组</div>
+                        <div class="grid-item-subtitle">43名成员 · 月活动</div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGxhbnRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="小型绿植" style="width: 100%; aspect-ratio: 1; object-fit: cover;">
+                    <div class="grid-item-content">
+                        <div class="grid-item-title">求借小型绿植</div>
+                        <div class="grid-item-subtitle">3天内 · 装修拍摄</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部导航栏 -->
+        <div class="tab-bar">
+            <div class="tab-item" data-target="home">
+                <i class="fas fa-home"></i>
+                <span class="tab-item-label">首页</span>
+            </div>
+            <div class="tab-item active" data-target="discover">
+                <i class="fas fa-compass"></i>
+                <span class="tab-item-label">发现</span>
+            </div>
+            <div class="tab-item" data-target="post">
+                <i class="fas fa-plus-circle"></i>
+                <span class="tab-item-label">发布</span>
+            </div>
+            <div class="tab-item" data-target="messages">
+                <i class="far fa-comment-dots"></i>
+                <span class="tab-item-label">消息</span>
+            </div>
+            <div class="tab-item" data-target="profile">
+                <i class="far fa-user"></i>
+                <span class="tab-item-label">我的</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html> 

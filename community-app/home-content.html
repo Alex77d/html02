@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 - 邻里社区</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/encoding-fix.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        /* 头像样式改进 */
+        .avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- 状态栏 -->
+    <div class="status-bar">
+        <span class="time">11:30</span>
+        <div class="indicators">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-three-quarters"></i>
+        </div>
+    </div>
+    
+    <!-- 应用内容区域 -->
+    <div class="app-content">
+        <!-- 顶部导航栏 -->
+        <div class="top-nav">
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>北京市朝阳区</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="搜索社区物品、活动或用户">
+            </div>
+        </div>
+        
+        <!-- 轮播图 -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="社区活动宣传" style="width:100%; height:100%; object-fit:cover; border-radius:12px;">
+                    <div class="slide-content">
+                        <h3 class="slide-title">社区读书会</h3>
+                        <p class="slide-subtitle">每周日下午，欢迎参加！</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="社区共享活动" style="width:100%; height:100%; object-fit:cover; border-radius:12px;">
+                    <div class="slide-content">
+                        <h3 class="slide-title">工具共享计划</h3>
+                        <p class="slide-subtitle">节约资源，便捷生活</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="社区志愿活动" style="width:100%; height:100%; object-fit:cover; border-radius:12px;">
+                    <div class="slide-content">
+                        <h3 class="slide-title">周末公园清理</h3>
+                        <p class="slide-subtitle">志愿者招募中</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 热门租借 -->
+        <div class="card-section">
+            <div class="section-header">
+                <h2 class="section-title">热门租借</h2>
+                <span class="section-more">查看全部 <i class="fas fa-chevron-right"></i></span>
+            </div>
+            
+            <div style="overflow-x: auto; display: flex; gap: 16px; padding: 4px 0 16px 0;">
+                <div class="card" style="min-width: 260px; flex-shrink: 0;">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWxlY3RyaWMlMjBiaWtlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="电动自行车" class="card-image">
+                        <div class="card-content">
+                            <h3 style="margin: 0 0 6px 0; font-size: 16px;">全新电动自行车（日租）</h3>
+                            <div style="color: var(--primary-color); font-weight: 600; font-size: 18px; margin-bottom: 8px;">¥50/天</div>
+                            <div style="display: flex; align-items: center; margin-top: 8px; justify-content: space-between;">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <img src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXNpYW4lMjBtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="用户头像" class="avatar" style="width: 24px; height: 24px;">
+                                    <span style="font-size: 14px; color: var(--dark-gray);">张先生</span>
+                                </div>
+                                <span style="font-size: 12px; color: var(--dark-gray);">距离 0.5km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card" style="min-width: 260px; flex-shrink: 0;">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1577655197620-704858b270ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aXBhZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="iPad Pro" class="card-image">
+                        <div class="card-content">
+                            <h3 style="margin: 0 0 6px 0; font-size: 16px;">iPad Pro 12.9寸（周租）</h3>
+                            <div style="color: var(--primary-color); font-weight: 600; font-size: 18px; margin-bottom: 8px;">¥200/周</div>
+                            <div style="display: flex; align-items: center; margin-top: 8px; justify-content: space-between;">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGFzaWFuJTIwbWFufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="用户头像" class="avatar" style="width: 24px; height: 24px;">
+                                    <span style="font-size: 14px; color: var(--dark-gray);">王先生</span>
+                                </div>
+                                <span style="font-size: 12px; color: var(--dark-gray);">距离 1.2km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card" style="min-width: 260px; flex-shrink: 0;">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3VuZ2xhc3Nlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="高级厨房用具" class="card-image">
+                        <div class="card-content">
+                            <h3 style="margin: 0 0 6px 0; font-size: 16px;">烘焙工具全套（3天起租）</h3>
+                            <div style="color: var(--primary-color); font-weight: 600; font-size: 18px; margin-bottom: 8px;">¥80/3天</div>
+                            <div style="display: flex; align-items: center; margin-top: 8px; justify-content: space-between;">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <img src="https://images.unsplash.com/photo-1628015081036-0747ec8f077a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXNpYW4lMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="用户头像" class="avatar" style="width: 24px; height: 24px;">
+                                    <span style="font-size: 14px; color: var(--dark-gray);">李女士</span>
+                                </div>
+                                <span style="font-size: 12px; color: var(--dark-gray);">距离 0.8km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 附近活动 -->
+        <div class="card-section">
+            <div class="section-header">
+                <h2 class="section-title">附近活动</h2>
+                <span class="section-more">查看全部 <i class="fas fa-chevron-right"></i></span>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://images.unsplash.com/photo-1507503343980-3a5987a1a4ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8eW9nYSUyMGNsYXNzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="用户头像" class="avatar">
+                    <div class="user-info">
+                        <div class="user-name">社区瑜伽小组</div>
+                        <div class="post-time">今天 08:30</div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-text">
+                        【本周六瑜伽课】欢迎大家参加本周六上午9点的社区瑜伽课，适合初学者，请带上瑜伽垫和水。地点：社区活动中心三楼。
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1633381659744-4a4eb7c085e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHlvZ2ElMjBjbGFzc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="瑜伽活动" class="card-image">
+                </div>
+                <div class="card-footer">
+                    <div class="action-button">
+                        <i class="far fa-heart"></i>
+                        <span class="counter">18</span>
+                    </div>
+                    <div class="action-button">
+                        <i class="far fa-comment"></i>
+                        <span class="counter">6</span>
+                    </div>
+                    <div class="action-button">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://images.unsplash.com/photo-1511732831640-a2b3169fce9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGdhcmRlbmluZyUyMGNsdWJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="用户头像" class="avatar">
+                    <div class="user-info">
+                        <div class="user-name">屋顶花园俱乐部</div>
+                        <div class="post-time">昨天 16:45</div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-text">
+                        春季种植开始啦！本周日下午2点，我们将在社区屋顶花园进行今年的第一次集体种植活动，提供各类蔬菜种子和工具，欢迎大家带上孩子一起参加！
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGdhcmRlbmluZyUyMGNsdWJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="园艺活动" class="card-image">
+                </div>
+                <div class="card-footer">
+                    <div class="action-button">
+                        <i class="far fa-heart"></i>
+                        <span class="counter">32</span>
+                    </div>
+                    <div class="action-button">
+                        <i class="far fa-comment"></i>
+                        <span class="counter">14</span>
+                    </div>
+                    <div class="action-button">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 底部导航栏 -->
+    <div class="tab-bar">
+        <div class="tab-item active" data-target="home">
+            <i class="fas fa-home"></i>
+            <span class="tab-item-label">首页</span>
+        </div>
+        <div class="tab-item" data-target="discover">
+            <i class="fas fa-compass"></i>
+            <span class="tab-item-label">发现</span>
+        </div>
+        <div class="tab-item" data-target="post">
+            <i class="fas fa-plus-circle"></i>
+            <span class="tab-item-label">发布</span>
+        </div>
+        <div class="tab-item" data-target="messages">
+            <i class="far fa-comment-dots"></i>
+            <span class="tab-item-label">消息</span>
+        </div>
+        <div class="tab-item" data-target="profile">
+            <i class="far fa-user"></i>
+            <span class="tab-item-label">我的</span>
+        </div>
+    </div>
+    
+    <script src="./js/main.js"></script>
+</body>
+</html> 

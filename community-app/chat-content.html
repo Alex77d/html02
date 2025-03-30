@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天 - 邻里社区</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/encoding-fix.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .chat-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .chat-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- 状态栏 -->
+    <div class="status-bar">
+        <span class="time">11:30</span>
+        <div class="indicators">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-three-quarters"></i>
+        </div>
+    </div>
+    
+    <!-- 应用内容区域 -->
+    <div class="app-content" style="display: flex; flex-direction: column; height: 100%;">
+        <!-- 聊天头部 -->
+        <div class="chat-header">
+            <i class="fas fa-chevron-left back-button"></i>
+            <div class="chat-title">
+                <img src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXNpYW4lMjBtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="张先生" class="chat-avatar">
+                <span>张先生</span>
+            </div>
+            <i class="fas fa-ellipsis-h chat-actions"></i>
+        </div>
+        
+        <!-- 聊天消息区域 -->
+        <div class="chat-messages">
+            <div class="message-bubble received-message">
+                <div>您好，我看到您对我出租的电动自行车有兴趣，有什么可以帮您的吗？</div>
+                <div class="message-time">10:15</div>
+            </div>
+            
+            <div class="message-bubble sent-message">
+                <div>您好，我想了解一下这辆自行车的具体情况，能骑多远？电池续航如何？</div>
+                <div class="message-time">10:18</div>
+            </div>
+            
+            <div class="message-bubble received-message">
+                <div>这辆车是去年买的，几乎全新，一次充电可以骑行约50公里，取决于路况和骑行方式。电池很新，充满电大约需要4-5小时。</div>
+                <div class="message-time">10:20</div>
+            </div>
+            
+            <div class="message-bubble sent-message">
+                <div>听起来不错！押金是多少？我计划租用3天，从本周五到周日，可以吗？</div>
+                <div class="message-time">10:22</div>
+            </div>
+            
+            <div class="message-bubble received-message">
+                <div>押金是500元，租金是每天50元，租3天就是150元。周五到周日完全没问题，那几天我刚好不用车。</div>
+                <div class="message-time">10:25</div>
+            </div>
+            
+            <div class="message-bubble received-message">
+                <div>如果您方便的话，可以在周五上午来我家取车，我会提前给您准备好充电器和锁。</div>
+                <div class="message-time">10:26</div>
+            </div>
+            
+            <div class="message-bubble sent-message">
+                <div>太好了！周五上午9点可以吗？需要我带什么证件？</div>
+                <div class="message-time">10:28</div>
+            </div>
+            
+            <div class="message-bubble received-message">
+                <div>9点没问题。请带上您的身份证，我们会拍照登记，还有押金现金或者可以微信转账。</div>
+                <div class="message-time">10:30</div>
+            </div>
+        </div>
+        
+        <!-- 聊天输入区域 -->
+        <div class="chat-input">
+            <i class="fas fa-plus-circle" style="font-size: 24px; color: var(--dark-gray);"></i>
+            <input type="text" class="chat-input-field" placeholder="输入消息...">
+            <button class="chat-send">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    
+    <script src="./js/main.js"></script>
+</body>
+</html> 
